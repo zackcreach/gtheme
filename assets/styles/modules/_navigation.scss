@@ -1,0 +1,23 @@
+.navigation {
+    @include hidden;
+    
+    @include atMedium {
+        @include visible;
+        min-width: 660px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__link {
+        font-size: 0.81rem;
+        color: $text-subtitle-color;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: white;
+        transition: $transition-ease;
+    }
+
+    &__link:hover {
+        color: $text-title-color;
+    }
+}

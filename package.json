@@ -1,0 +1,26 @@
+{
+  "name": "static-template-babel",
+  "version": "1.0.0",
+  "author": "Zack Creach",
+  "license": "ISC",
+  "scripts": {
+    "dev": "concurrently \"npm run sync\" \"npm run watch\" \"npm run sass\"",
+    "sync": "browser-sync start --server --port 3333 --files './public/**/*' --startPath './public' --no-ghost-mode",
+    "watch": "webpack --watch --progress",
+    "sass": "gulp sass:watch"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-loader": "7.1.2",
+    "babel-preset-env": "1.6.1",
+    "browser-sync": "^2.18.13",
+    "concurrently": "^3.5.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-sass": "^3.1.0",
+    "html-loader": "^0.5.5",
+    "pug-html-loader": "^1.1.5",
+    "webpack": "^3.10.0"
+  }
+}
