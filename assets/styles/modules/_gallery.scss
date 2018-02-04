@@ -1,0 +1,16 @@
+.gallery {
+  
+  &__container {
+
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__title {
+    padding: 0 0 30px 42px;
+    color: #FFFFFF;
+  }
+}

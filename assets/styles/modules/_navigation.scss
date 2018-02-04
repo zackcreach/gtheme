@@ -1,14 +1,18 @@
 .navigation {
     @include hidden;
     
-    @include atMedium {
+    @include atCustom(930px) {
         @include visible;
-        min-width: 660px;
+        width: 100%;
+        min-width: 560px;
+        max-width: 660px;
+        margin: 0 35px 0 35px;
         display: flex;
         justify-content: space-between;
     }
 
     &__link {
+        position: relative;
         font-size: 0.81rem;
         color: $text-subtitle-color;
         text-transform: uppercase;
@@ -18,6 +22,24 @@
     }
 
     &__link:hover {
-        color: $text-title-color;
+        color: #FFFFFF;
+
+        &::after {
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            content: "";
+            width: 100%;
+            max-width: 0;
+            height: 1.5px;
+            background: $primary-color;
+            animation: growLeft 5s ease-out;
+        }
+    }
+}
+
+@keyframes growLeft {
+    100% {
+        max-width: 1000px;
     }
 }

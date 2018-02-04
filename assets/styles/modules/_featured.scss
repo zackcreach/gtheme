@@ -1,0 +1,23 @@
+.featured {
+  margin-bottom: 85px;
+  z-index: 1;
+
+  &__container {
+    padding: 58px 78px 0 78px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    max-width: 300px;
+  }
+
+  &__subtitle {
+    padding-bottom: 8px;
+  }
+
+  &__title {
+    padding-bottom: 2px;
+  }
+}

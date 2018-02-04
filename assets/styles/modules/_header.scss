@@ -1,4 +1,5 @@
 .header {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -7,8 +8,11 @@
     height: 104px;
 
     &__background {
+        position: absolute;
+        top: 0;
         height: 630px;
         width: 100%;
+        z-index: -1;
     }
 
     &__container {
@@ -25,7 +29,7 @@
         @include atXLarge {
             padding: 0;
             margin: 0 auto 0 auto;
-            max-width: $container-width;
+            max-width: $container-1200;
         }
     }
 
@@ -34,7 +38,6 @@
 
         @include atMedium {
             width: 150px;
-            margin-right: 40px;
         }
     }
 
