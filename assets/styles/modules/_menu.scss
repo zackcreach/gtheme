@@ -91,14 +91,14 @@
       flex-direction: column;
       justify-content: space-between;
       height: 30vh;
-      min-height: 150px;
-      max-height: 215px;
+      min-height: 170px;
+      max-height: 230px;
   }
   
   &__nav-primary-link {
       display: block;
       font-size: 0.75rem;
-      line-height: 1;
+      line-height: 2;
       color: #414141;
       text-transform: uppercase;
       letter-spacing: 4px;
@@ -116,14 +116,14 @@
       flex-direction: column;
       justify-content: space-between;
       height: 30vh;
-      min-height: 150px;
-      max-height: 215px;
+      min-height: 170px;
+      max-height: 230px;
   }
 
   &__nav-secondary-link {
       display: block;
       font-size: 0.875rem;
-      line-height: 1;
+      line-height: 2;
       color: #888888;
       transition: $transition-ease;
   }

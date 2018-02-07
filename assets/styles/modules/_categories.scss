@@ -21,8 +21,8 @@
   &__block-start {
     display: block;
     flex-grow: 1;
-    height: 200px;
-    margin: 0 0 14px 0;
+    height: 270px;
+    margin: 0 0 0 0;
     transition: $transition-ease;
     
     @include atMedium {
@@ -30,7 +30,7 @@
     }
     
     @include atLarge {
-      height: 414px;
+      height: 554px;
       margin: 0 14px 0 0;
     }
     
@@ -56,10 +56,10 @@
   
   &__block {
     display: block;
-    height: 200px;
+    height: 270px;
     flex-basis: 100%;
     flex-grow: 1;
-    margin: 0 0 14px 0;
+    margin: 0 0 0 0;
     transition: $transition-ease;
     
     @include atMedium {

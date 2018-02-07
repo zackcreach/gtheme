@@ -60,8 +60,13 @@ h5 {
 }
 
 p {
+	color: $text-body-color;
 	font-size: .81rem;
 	line-height: 24px;
+
+	@include atSmall {
+		color: lighten($text-body-color, 18%);
+	}
 }
 
 ul {

@@ -1,6 +1,7 @@
 .featured {
   margin-bottom: 90px;
   z-index: 1;
+  overflow: hidden;
 
   &__container {
     padding: 58px 78px 0 78px;
@@ -10,6 +11,7 @@
   }
 
   &__item {
+    display: block;
     max-width: 300px;
   }
 
