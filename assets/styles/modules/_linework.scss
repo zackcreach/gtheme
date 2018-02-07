@@ -31,7 +31,7 @@ $linework-transition: all .2s ease;
         }
         
         &::after {
-            // position: absolute;
+            position: absolute;
             content: '';
             top: 50%;
             height: 1px;

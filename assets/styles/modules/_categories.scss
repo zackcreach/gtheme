@@ -4,8 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     
-    @include atLarge {
-      
+    @include atXLarge {
     }
   }
 
@@ -20,52 +19,97 @@
   }
   
   &__block-start {
-    width: 100%;
+    display: block;
+    flex-grow: 1;
+    height: 200px;
+    margin: 0 0 14px 0;
+    transition: $transition-ease;
+    
+    @include atMedium {
+      margin: 0 0 14px 0;
+    }
     
     @include atLarge {
-      width: auto;
-      flex-basis: 360px;
+      height: 414px;
+      margin: 0 14px 0 0;
+    }
+    
+    @include atCustom(1206px) {
       height: 660px;
       margin: 0 30px 0 0;
     }
   }
-
+  
   &__block-wrapper {
     display: flex;
+    flex-grow: 1;
     flex-wrap: wrap;
-    width: 100%;
     
-    @include atLarge {
-      width: auto;
-      flex-grow: 2;
+    @include atMedium {
+      flex-grow: 3;
+    }
+    
+    @include atCustom(1206px) {
+
     }
   }
   
   &__block {
-    width: 100%;
+    display: block;
+    height: 200px;
+    flex-basis: 100%;
+    flex-grow: 1;
+    margin: 0 0 14px 0;
+    transition: $transition-ease;
     
-    @include atLarge {
-      width: auto;
-      height: 315px;
-      flex-basis: 360px;
+    @include atMedium {
+      flex-basis: 33.33%;
       
       &:nth-child(1) {
-        flex-grow: 2;
+        margin: 0 7px 7px 0;
+      }
+      
+      &:nth-child(2) {
+        margin: 0 0 7px 7px;
+      }
+      
+      &:nth-child(3) {
+        margin: 7px 7px 0 0;
+      }
+      
+      &:nth-child(4) {
+        margin: 7px 0 0 7px;
+      }
+    }
+    
+    @include atCustom(1206px) {
+      height: 315px;
+      flex-basis: 350px;
+      flex-grow: 1;
+      
+      &:nth-child(1) {
+        flex-grow: 3;
         margin: 0 15px 15px 0;
       }
       
       &:nth-child(2) {
+        max-width: 350px;
         margin: 0 0 15px 15px;
       }
       
       &:nth-child(3) {
+        max-width: 350px;
         margin: 15px 15px 0 0;
       }
       
       &:nth-child(4) {
-        flex-grow: 2;
+        flex-grow: 3;
         margin: 15px 0 0 15px;
       }
     }
+  }
+
+  &__block:hover, &__block-start:hover {
+    opacity: 0.8;
   }
 }
