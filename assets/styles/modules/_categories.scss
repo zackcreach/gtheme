@@ -4,7 +4,8 @@
     display: flex;
     flex-wrap: wrap;
     
-    @include atXLarge {
+    @include atMedium {
+      padding: 0;
     }
   }
 
@@ -23,7 +24,24 @@
     flex-grow: 1;
     height: 270px;
     margin: 0 0 0 0;
+    background-position: center;
     transition: $transition-ease;
+    position: relative;
+    
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.25);
+      transition: $transition-ease;
+    }
+    
+    &:hover::before {
+      background: rgba(0, 0, 0, 0.1);
+    }
     
     @include atMedium {
       margin: 0 0 14px 0;
@@ -46,7 +64,7 @@
     flex-wrap: wrap;
     
     @include atMedium {
-      flex-grow: 3;
+      flex-grow: 2;
     }
     
     @include atCustom(1206px) {
@@ -61,6 +79,23 @@
     flex-grow: 1;
     margin: 0 0 0 0;
     transition: $transition-ease;
+    -webkit-backface-visibility: hidden;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.25);
+      transition: $transition-ease;
+    }
+    
+    &:hover::before {
+      background: rgba(0, 0, 0, 0.1);
+    }
     
     @include atMedium {
       flex-basis: 33.33%;
@@ -107,9 +142,5 @@
         margin: 15px 0 0 15px;
       }
     }
-  }
-
-  &__block:hover, &__block-start:hover {
-    opacity: 0.8;
   }
 }
