@@ -1,6 +1,6 @@
-class Menu {
+export default class Menu {
     constructor() {
-        this.hamburger = document.querySelector(".linework__menu--white");
+        this.hamburger = document.querySelector("[class*=linework__menu]");
         this.window = document.querySelector(".menu__window");
         this.container = document.querySelector(".menu__window-container");
         this.menu = document.querySelector(".menu__window-container");
@@ -11,7 +11,7 @@ class Menu {
         this.events();
     }
     events() {
-        ["click", "keyup"].map((event) =>
+        ["click", "touchstart", "keyup"].map((event) =>
             window.addEventListener(event, this.handleEvents.bind(this)),
         );
     }
@@ -39,5 +39,3 @@ class Menu {
         }
     }
 }
-
-export default Menu;
